@@ -11,17 +11,22 @@
     <title>Portflio | Branden Hernandez Programmer and Photographer</title>
 </head>
 
-<nav role = "navigation" aria-label="main menu">  <!-- menu bar-->
+<!-- menu bar-->
+<nav role = "navigation" aria-label="main menu">  
     <div id="nav-logo-section" class="nav-section">
         <a href="/My-Portfolio/index.html">
             Branden Hernandez <br>
-            DevOps Engineer & Photographer
+            Devops/Photographer
         </a>
     </div>
+
+ <!-- Link section -->
     <div id="nav-link-section" class="nav-section">
         <a href="/My-Portfolio/Pages/aboutMe.html">About Me</a>
         <a href="/My-Portfolio/Pages/projects.html"">Projects</a>
     </div>
+
+<!-- Social media section -->
     <div id="nav-social-section" class="nav-section">
         <a href="https://www.instagram.com/betacode/">
             <i class="fa-brands fa-instagram"></i>
@@ -36,73 +41,146 @@
             <i class="fa-brands fa-github"></i>
         </a>
     </div>
+
+<!-- Contact Info section -->
     <div id="nav-contact-section" class="nav-section">
         <a href="/My-Portfolio/Pages/contactInfo.html">Contact Info</a>
     </div>
 </nav>
 
+<!-- Background photo and text -->
 <body>
-    <section>  
-        <h2>Mission Statment</h2>
-        <p>
-            Build -> Test -> Deploy
-        </p>
-    </section>
+    <div id="header">
+        <div class="header-text">
+            <p>DevOps Engineer</p>
+            <h1>Hello, I'm <span>Branden</span><br>
+                Come collab with me!</h1>
+        </div>
+    </div>
 
-    <section>  
-        <h2>About Me</h2>
-        <p>
-            I'm Branden Hernandez, a DevOps Engineer that loves to inovate and iterate on new technologies.
-            <br> I'm always looking for new ways to devolp my skills and gain new experiences to create complex projects with efficiency and quality.
-        </p>
-    </section>
+<!-- about me section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/Assets/Images/Background.jpeg" height="90%">
+                </div>
 
-    <section>  
-        <h2>Projects</h2>
-        <p>
-            Here are some recent projects ive been working on.
-            <li>
-                card of project
-            </li>
-            <li>
-                card of project
-            </li>
-            <li>
-                card of project
-            </li>
-            <li>
-                card of project
-            </li>
-        </p>
-    </section>
+                <!-- about me sub section -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Branden Hernandez, a DevOps Engineer that loves to inovate and iterate on new technologies. I'm always looking for new ways to devolp my skills and gain new experiences to create complex projects with efficiency and quality.</p>
 
-    <section>  
-        <h2>Photography</h2>
-        <p>
-            Here are some recent photos ive been working on.
-            <ul>
-                <li>
-                    card of photo
-                </li>
-                <li>
-                    card of photo
-                </li>
-                <li>
-                    card of photo
-                </li>
-                <li>
-                    card of photo
-                </li>
-            </ul>
-        </p>
-    </section>
+                    <!-- about me tab section -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('learning')">Learning</p>
+                    </div>
+                    
+                    <!-- Skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>
+                                    Devops <br>                                    
+                                </span>
+                                Designing web/apps interface
+                            </li>
+                            <li>
+                                <span>
+                                    photography <br>                                    
+                                </span>
+                                Designing web/apps interface
+                            </li>
+                            <li>
+                                <span>
+                                    Whatever <br>
+                                </span>
+                                Designing web/apps interface
+                            </li>
+                        </ul>
+                    </div>
 
-    <section>  
-        <h2>Contact Me</h2>
-        <p>
-            send me an email 
-        </p>
-    </section>
+                    <!-- Experance -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>
+                                    1/20XX-1/20XX <br>                                    
+                                </span>
+                                Job1
+                            </li>
+                            <li>
+                                <span>
+                                    1/20XX-1/20XX <br>                                    
+                                </span>
+                                Job2
+                            </li>
+                            <li>
+                                <span>
+                                    1/20XX-1/20XX <br>                                    
+                                </span>
+                                Job3
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>
+                                    5/20XX-5/20XX <br>                                    
+                                </span>
+                                school1
+                            </li>
+                            <li>
+                                <span>
+                                    5/20XX-5/20XX <br>                                    
+                                </span>
+                                school2
+                            </li>
+                            <li>
+                                <span>
+                                    5/20XX-5/20XX <br>                                    
+                                </span>
+                                school3
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Learning -->
+                     <div class="tab-contents" id="learning">
+                        <ul>
+                            <li>
+                                <span>
+                                    Topic1<br>                                    
+                                </span>
+                                Subject1
+                            </li>
+                            <li>
+                                <span>
+                                    Topic2<br>                                    
+                                </span>
+                                Subject2
+                            </li>
+                            <li>
+                                <span>
+                                    Topic3<br>                                    
+                                </span>
+                                Subject3
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<!-- script to show contents of about me section -->
+<script src="/Scripts/IndexScript.js"></script>
 
 </html>
