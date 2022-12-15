@@ -68,7 +68,7 @@ nav > .nav-section{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(/Images/WhatsApp\ Image\ 2022-12-13\ at\ 4.31.13\ PM.jpg);
+    background-image: url('../Images/backimage.jpg');
     background-size: cover;
     background-position: center;
 }
