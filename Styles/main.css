@@ -1,5 +1,6 @@
 :root {
     --border-color: rgb(255,255,255,0.1);
+    --main-color: rgb(8, 210, 210);
 }
 
 *{
@@ -11,9 +12,12 @@
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color:  rgb(6,11,25);
-    
 }
 
 /* Navigation bar section*/
@@ -25,6 +29,13 @@ nav{
     display: flex;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
+    /* makes nav bar fixed */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+    background-color: rgb(7, 6, 25);
 }
 
 nav > .nav-section{
@@ -74,7 +85,7 @@ nav > .nav-section{
 }
 
 .header-text{
-    margin-top: 3%;
+    margin-top: 5%;
     font-size: 30px;
 }
 
@@ -83,24 +94,12 @@ nav > .nav-section{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color:  rgb(8, 210, 210);
+    color:  var(--main-color);
 }
-
-
-/* #nav-contact-section,
-#nav-link-section::after {
-    content: '';
-    width: auto;
-    height: 3px;
-    background: red;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-} */
-
 
 /* About me section*/
 #about{
+    /* TODO: after picture change, change padding to 80px 50px; */
     padding: 80px 0;
 }
 .row{
@@ -120,7 +119,6 @@ nav > .nav-section{
 
 .about-col-2{
     flex-basis: 60%;
-    
 }
 
 /* about me subtitle section */
@@ -147,7 +145,7 @@ nav > .nav-section{
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(8, 210, 210);
+    background: var(--main-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -155,7 +153,7 @@ nav > .nav-section{
 }
 
 .tab-links.active-link::after{
-    width: 50%;
+    width: 75%;
 }
 
 /* tab context styling */
@@ -175,4 +173,98 @@ nav > .nav-section{
 
 .tab-contents.active-tab{
     display: block;
+}
+
+/* Projects Section*/
+#portfolio{
+    /* TODO: put it to 50px 50px after picture change */
+    padding: 50px 0;
+}
+
+/* sets pictures in a grid evenly spaced out */
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* makes images rounded and adds a trasition to the image */
+.work img{
+    width: 100%;
+    border-radius: 2%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+/* color gradiant  */
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), var(--main-color));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* adds circle link to picture transition */
+.layer a i{
+    margin-top: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* zooms in on image on hover */
+.work:hover img{
+    transform: scale(1.1);
+}
+
+/* adds the trasition of color to 100% */
+.work:hover .layer{
+    height: 100%;
+}
+
+/* see more button */
+.button{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--main-color);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.button:hover{
+    background: var(--main-color);
 }
