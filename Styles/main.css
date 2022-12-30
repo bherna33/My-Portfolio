@@ -99,7 +99,7 @@ nav > .nav-section{
 
 /* About me section*/
 #about{
-    /* TODO: after picture change, change padding to 80px 50px; */
+    /* FIXME: after picture change, change padding to 80px 50px; */
     padding: 80px 0;
 }
 .row{
@@ -177,7 +177,7 @@ nav > .nav-section{
 
 /* Projects Section*/
 #portfolio{
-    /* TODO: put it to 50px 50px after picture change */
+    /* FIXME: put it to 50px 50px after picture change */
     padding: 50px 0;
 }
 
@@ -262,9 +262,147 @@ nav > .nav-section{
     border-radius: 6px;
     text-decoration: none;
     color: white;
-    transition: background 0.5s;
+    transition:  0.5s;
 }
 
 .button:hover{
+    background: var(--main-color);
+}
+
+/* adds Blur effect to text */
+#blur{
+    color: transparent;
+    text-shadow: 0 0 8px white;
+    font-weight: bold;
+}
+
+
+/* Footer Section */
+footer{
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid var(--main-color);
+}
+
+.footer-content{
+    display: flex;
+}
+
+.footer-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.box .content p{
+    text-align: justify;
+}
+
+/* Left section */
+.left .content .footer-social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .footer-social a{
+    padding: 0 2px;
+}
+
+.left .content .footer-social a i{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.left .content .footer-social a i:hover{
+    background: var(--main-color);
+}
+
+/* middle section */
+.center .content .icon{
+    font-size: 1.4375rem;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.center .content .icon:hover{
+   background: var(--main-color);
+}
+
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0;
+}
+
+/* right section */
+.right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+}
+
+.right .content form .message{
+    margin-top: 10px;
+}
+
+.right .content form input, 
+.right form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    background: var(--border-color);
+    padding-left: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.right .content form input:focus,
+.right form textarea:focus{
+    outline-color: var(--main-color);
+}
+
+.right form input{
+    height: 35px;
+}
+
+/* footer button */
+.right form .footer-button{
+    margin-top: 10px;
+}
+
+.right form .footer-button button{
+    display: block;
+    margin: 0px auto;
+    width: fit-content;
+    border: 1px solid var(--main-color);
+    padding: 14px 50px;
+    border-radius: 6px;
+    outline: none;
+    background: var(--border-color);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right form .footer-button button:hover{
     background: var(--main-color);
 }
