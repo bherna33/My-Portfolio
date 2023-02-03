@@ -76,13 +76,14 @@ nav > .nav-section{
 /* Header section */
 
 /* Backgound image. */
-#header{
+/* maybe put banner here */
+/* #header{
     width: 100%;
     height: 100vh;
     background-image: url('../Images/backimage.jpg');
     background-size: cover;
     background-position: center;
-}
+} */
 
 .header-text{
     margin-top: 5%;
