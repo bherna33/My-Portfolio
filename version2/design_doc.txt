@@ -1,0 +1,32 @@
+Introduction:
+
+	For this document I will be making a new portfolio website. In this website it will be displaying all my projects.
+
+Goals and Objectives:
+
+	In this project my goal is to recreate my website using new things that I have learned and to give myself a challage.
+
+Technologies and Tools:
+	* Progamming languages: JavaScript
+	* Frameworks: React
+	* IDE: Vim/ NeoVim
+	I will be using all these Techologies to create my project. I will be using React to make my website more reactive, JavaScript to code my website, and Vim/ NeoVim to challege myself in a new enviorment.
+
+Development Roadmap:
+	1. Create Design doc.
+	2. Create basic Nav bar
+	3. Create basic page layout
+	4. Divide the page into sections
+		a. Projects
+		b. About Me
+		c. How to contact me
+		d. Resume
+		e. Blog/ Articles
+		f. HomePage
+	5. Plan content
+	6. Test website
+	7. Deploy
+
+Conculsion:
+	The whole point of this project is to keep my skills fresh and also to challege myself with an unfamiliar enviroment.
+
