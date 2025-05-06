@@ -1,8 +1,8 @@
 import Footer from "./Footer";
-// import Icon from "./Icon";
 import Modal from "./Model";
 import { useState } from 'react';
-import DraggableWindow from "./window";
+// import Draggable from "./Draggable";
+import Window from "./Window";
 
 export default function App() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,25 +15,28 @@ export default function App() {
 	  setIsModalOpen(false);
 	};
 
-	const [zIndices, setZIndices] = useState<number[]>([1]); // For 3 windows
-
-	function bringToFront(id: number) {
-		const maxZ = Math.max(...zIndices);
-		setZIndices(prev =>
-		prev.map((z, i) => (i === id ? maxZ + 1 : z))
-		);
-	}
+	
 	return (
 		<div className="h-screen w-screen bg-cover bg-center " style={{ backgroundImage: "url('/windows-xp.jpg')" }} >
-			{/* <Icon/> */}
+			<Window />
+{/* 
 			{zIndices.map((zIndex, i) => (
-				<DraggableWindow
+				<Draggable
 					key={i}
 					id={i}
 					zIndex={zIndex}
 					onClick={bringToFront}
-				/>
-			))}
+					x={50}
+					y={100}
+				>
+					<div>
+					<button>
+						hheh
+					</button>
+					</div>
+					
+				</Draggable>
+			))} */}
 
 			<div className="p-4">
 
