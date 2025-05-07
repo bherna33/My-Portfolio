@@ -1,64 +1,21 @@
-import Footer from "./Footer";
-import Modal from "./Model";
-import { useState } from 'react';
-// import Draggable from "./Draggable";
-import Window from "./Window";
+import Footer from "./components/Footer";
+import Icon from "./components/Icon";
 
 export default function App() {
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	const openModal = () => {
-	  setIsModalOpen(true);
-	};
-  
-	const closeModal = () => {
-	  setIsModalOpen(false);
-	};
-
 	
 	return (
-		<div className="h-screen w-screen bg-cover bg-center " style={{ backgroundImage: "url('/windows-xp.jpg')" }} >
-			<Window />
-{/* 
-			{zIndices.map((zIndex, i) => (
-				<Draggable
-					key={i}
-					id={i}
-					zIndex={zIndex}
-					onClick={bringToFront}
-					x={50}
-					y={100}
-				>
-					<div>
-					<button>
-						hheh
-					</button>
-					</div>
-					
-				</Draggable>
-			))} */}
+		<div className="h-screen w-screen bg-cover bg-center relative overflow-hidden " style={{ backgroundImage: "url('/windows-xp.jpg')" }} >
+			<Icon name="test" icon="🧪" xPosition={30} yPosition={30}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			</Icon>	
 
-			<div className="p-4">
+			<Icon name="hello" icon="👋🏾" xPosition={30} yPosition={100}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			</Icon>	
 
-				<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={openModal}>
-					Open Modal
-				</button>
-
-				<Modal isOpen={isModalOpen} onClose={closeModal}>
-
-					<h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-						Modal Title
-					</h3>
-
-					<div className="mt-2">
-
-						<p className="text-sm text-gray-500">
-							This is the content of the modal.
-						</p>
-					</div>
-				</Modal>
-    		</div>
-			
+			<Icon name="world" icon="🌎" xPosition={30} yPosition={170}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			</Icon>	
 			<Footer/>
 		</div>
 	)
