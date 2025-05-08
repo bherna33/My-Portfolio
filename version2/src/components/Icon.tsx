@@ -26,12 +26,12 @@ export default function Icon({ name, icon, children, xPosition, yPosition }: Ico
                 x={xPosition}
                 y={yPosition}
             >
-            <div className=" self-center place-content-center place-items-center place-self-center justify-center justify-items-center justify-self-center content-center items-center text-middle align-middle border-2"  onDoubleClick={change}>
-                <div className=" self-center place-content-center place-items-center place-self-center justify-center justify-items-center justify-self-center content-center items-center text-middle align-middle " >
+            <div className=" text-center "  onDoubleClick={change}>
+                <div className=" " >
                     {icon}
                 </div>
 
-                <div className=" self-center place-content-center place-items-center place-self-center justify-center justify-items-center justify-self-center content-center items-center text-middle align-middle " >
+                <div className=" " >
                     {name}
                 </div>
             </div>
