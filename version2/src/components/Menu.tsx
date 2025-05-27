@@ -5,12 +5,14 @@ interface MenuProps{
 export default function Menu({styles}: MenuProps){
     return(
 
-        <div className={`border-2 absolute top-0 right-0 ${styles}`}>
+        <div className={`border-2 absolute rounded-t-sm bottom-9 ${styles}`}>
             <div className="header">
                 image Branden Hernandez
+                <br />
+                
             </div>
 
-            <div className="flex justify-between">
+            <div className="flex ">
                 <div className="bg-white ">
                     icon
                     <br />

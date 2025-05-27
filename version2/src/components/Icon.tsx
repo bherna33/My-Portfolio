@@ -1,9 +1,8 @@
 import Draggable from "./Draggable";
 import Window from "./Window";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-
-interface IconProps{
+interface IconProps {
     name: string;
     icon: string;
     children: React.ReactNode;
@@ -11,36 +10,68 @@ interface IconProps{
     yPosition: number;
 }
 
+interface WindowInstance {
+    id: number;
+    zIndex: number;
+}
 
-export default function Icon({ name, icon, children, xPosition, yPosition }: IconProps){
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
 
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+export default function Icon({ name, icon, children, xPosition, yPosition }: IconProps) {
+    const [windows, setWindows] = useState<WindowInstance[]>([]);
+    const [isMobile, setIsMobile] = useState(false);
+    const [topZ, setTopZ] = useState(10);
 
-    function change(){
-      setIsOpen(true);
+    useEffect(() => {
+        setIsMobile(isMobileDevice());
+    }, []);
+
+    function openNewWindow() {
+        const newId = Date.now();
+        setWindows((prev) => [
+            ...prev,
+            { id: newId, zIndex: topZ }
+        ]);
+        setTopZ((prev) => prev + 1);
+    }
+
+    function closeWindow(id: number) {
+        setWindows((prev) => prev.filter((win) => win.id !== id));
+    }
+
+    function bringToFront(id: number) {
+        setTopZ((prevZ) => {
+            setWindows((wins) =>
+                wins.map((win) =>
+                    win.id === id ? { ...win, zIndex: prevZ + 1 } : win
+                )
+            );
+            return prevZ + 1;
+        });
     }
 
     return (
         <>
-            <Draggable
-                x={xPosition}
-                y={yPosition}
-            >
-            <div className=" text-center "  onDoubleClick={change}>
-                <div className=" " >
-                    {icon}
+            <Draggable x={xPosition} y={yPosition}>
+                <div className="text-center" onClick={isMobile ? openNewWindow : undefined}onDoubleClick={!isMobile ? openNewWindow : undefined}>
+                    <div>{icon}</div>
+                    <div>{name}</div>
                 </div>
-
-                <div className=" " >
-                    {name}
-                </div>
-            </div>
-
             </Draggable>
 
-            <div className={`${isOpen ? '' : 'hidden'}`} >
-                <Window name={name} icon={icon} children={children} />
-            </div>
-        </>      
+            {windows.map((win) => (
+                <div key={win.id} className={` relative z-10`} onMouseDown={() =>bringToFront(win.id)}>
+                    <Window
+                        name={name}
+                        icon={icon}
+                        close={() => closeWindow(win.id)}
+                    >
+                        {children}
+                    </Window>
+                </div>
+            ))}
+        </>
     );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Icon from "./components/Icon";
+import Menu from "./components/Menu";
 
 export default function App() {
 
@@ -12,18 +13,27 @@ export default function App() {
 	
 	return (
 		<div className="h-screen w-screen bg-cover bg-center relative overflow-hidden " style={{ backgroundImage: "url('/windows-xp.jpg')" }} >
-			<Icon name="test" icon="🧪" xPosition={30} yPosition={30}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			
+			<Icon name="About Me" icon="🧪" xPosition={30} yPosition={30} >
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
 			</Icon>	
 
-			<Icon name="hello" icon="🙋🏾‍♂️" xPosition={30} yPosition={100}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			<Icon name="Projects" icon="🙋🏾‍♂️" xPosition={30} yPosition={100}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
 			</Icon>	
 
-			<Icon name="world" icon="🌎" xPosition={30} yPosition={170}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			<Icon name="Contact" icon="🌎" xPosition={30} yPosition={170}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
 			</Icon>	
-			<Footer toggle={toggle} showMenu={showMenu}/>
+			
+
+			<Menu styles={`${showMenu ? '':'hidden'}`}/>
+
+			<Footer toggle={toggle} />
+			
 		</div>
 	)
 }
