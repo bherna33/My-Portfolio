@@ -9,19 +9,22 @@ interface WindowProps {
 }
 
 export default function Window({ name, icon, children, close,   }: WindowProps) {
-    const [size, setSize] = useState(false);
+    const [size, setSize] = useState<boolean>(false);
 
     function toggleSize() {
-        setSize(!size);
+        setSize(!size);        
     }
+
+    const x = Math.floor(Math.random() * (640 - 250 + 1)) + 250;
+    const y = Math.floor(Math.random() * (200 - 75 + 1)) + 75;
 
     return (
         <Draggable
-            x={Math.floor(Math.random() * (640 - 250 + 1)) + 250}
-            y={Math.floor(Math.random() * (200 - 75 + 1)) + 75}
-            styles={` ${size ? 'size-full' : 'w-96'} `}
+            x={x}
+            y={y}
+            styles={` w-96 `}
         >
-            <div className={`border-2 px-1 pb-1 backdrop-blur-3xl ${size ? 'w-full h-19/20 fixed top-0 left-0 ' : '  rounded-md'}`}>
+            <div className={`border-2 px-1 pb-1 backdrop-blur-3xl ${size ? ` h-19/20 fixed top-0 left-0 ` : `  rounded-md`}`}>
                 <div className="flex justify-between">
                     <div>{icon} {name}</div>
                     <div>
@@ -30,7 +33,7 @@ export default function Window({ name, icon, children, close,   }: WindowProps) 
                         <button className='border-2 bg-red-500 rounded-md px-1' onClick={close}>X</button>
                     </div>
                 </div>
-                <div className=" rounded-xs bg-white overflow-auto xs:overflow-scroll p-2 ">
+                <div className=" rounded-xs bg-white h-32 overflow-auto xs:overflow-scroll p-2 ">
                     {children}
                 </div>
             </div>

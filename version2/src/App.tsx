@@ -15,10 +15,12 @@ export default function App() {
 		<div className="h-screen w-screen bg-cover bg-center relative overflow-hidden " style={{ backgroundImage: "url('/windows-xp.jpg')" }} >
 			
 			<Icon name="About Me" icon="🧪" xPosition={30} yPosition={30} >
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+				<div>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+					<br />
+					hello 
+				</div>
+				
 			</Icon>	
 
 			<Icon name="Projects" icon="🙋🏾‍♂️" xPosition={30} yPosition={100}>
@@ -26,6 +28,10 @@ export default function App() {
 			</Icon>	
 
 			<Icon name="Contact" icon="🌎" xPosition={30} yPosition={170}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
+			</Icon>
+
+			<Icon name="Blog" icon="📑" xPosition={30} yPosition={240}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores hic, veritatis nostrum obcaecati ab laboriosam molestias aspernatur deleniti consequatur, velit modi neque nemo nihil dolores accusantium doloremque esse facilis.
 			</Icon>	
 			
