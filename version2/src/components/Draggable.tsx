@@ -77,7 +77,7 @@ export default function Draggable({ children, x, y, styles, onClick }: Draggable
       ref={windowRef}
       onMouseDown={onMouseDown}
       onTouchStart={onTouchStart}
-      className={`absolute select-none touch-none cursor-grab ${styles}`}
+      className={`absolute  ${styles}`}
       style={{
         left: position.x,
         top: position.y,

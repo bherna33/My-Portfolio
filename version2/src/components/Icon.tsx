@@ -41,28 +41,17 @@ export default function Icon({ name, icon, children, xPosition, yPosition }: Ico
         setWindows((prev) => prev.filter((win) => win.id !== id));
     }
 
-    function bringToFront(id: number) {
-        setTopZ((prevZ) => {
-            setWindows((wins) =>
-                wins.map((win) =>
-                    win.id === id ? { ...win, zIndex: prevZ + 1 } : win
-                )
-            );
-            return prevZ + 1;
-        });
-    }
-
     return (
         <>
-            <Draggable x={xPosition} y={yPosition}>
-                <div className="text-center" onClick={isMobile ? openNewWindow : undefined}onDoubleClick={!isMobile ? openNewWindow : undefined}>
+            <Draggable x={xPosition} y={yPosition} styles="select-none touch-none cursor-pointer">
+                <div className="text-center" onClick={isMobile ? openNewWindow : undefined} onDoubleClick={!isMobile ? openNewWindow : undefined}>
                     <div>{icon}</div>
                     <div>{name}</div>
                 </div>
             </Draggable>
 
             {windows.map((win) => (
-                <div key={win.id} className={` relative z-10`} onMouseDown={() =>bringToFront(win.id)}>
+                <div key={win.id} className={` relative z-10`} >
                     <Window
                         name={name}
                         icon={icon}

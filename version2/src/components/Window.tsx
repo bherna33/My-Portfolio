@@ -24,19 +24,20 @@ export default function Window({ name, icon, children, close,   }: WindowProps) 
             y={y}
             styles={` w-96 `}
         >
-            <div className={`border-2 px-1 pb-1 backdrop-blur-3xl ${size ? ` h-19/20 fixed top-0 left-0 ` : `  rounded-md`}`}>
-                <div className="flex justify-between">
+            <div className={`border-2 px-1 pb-1 backdrop-blur-3xl ${size ? ` h-19/20 fixed top-0 right-0 left-0` : `  rounded-md`}`}>
+                <div className="flex justify-between  cursor-grab">
                     <div>{icon} {name}</div>
                     <div>
-                        <button className='border-2 bg-green-500 rounded-md px-1.5'>_</button>
+                        {/* <button className='border-2 bg-green-500 rounded-md px-1.5'>_</button> */}
                         <button className='border-2 bg-yellow-500 rounded-md px-1' onClick={toggleSize}>O</button>
                         <button className='border-2 bg-red-500 rounded-md px-1' onClick={close}>X</button>
                     </div>
                 </div>
-                <div className=" rounded-xs bg-white h-32 overflow-auto xs:overflow-scroll p-2 ">
+                <div className={` rounded-xs bg-white select-text overflow-auto xs:overflow-scroll p-2 ${size ? ` h-19/20 ` : ` h-72`}`}>
                     {children}
                 </div>
             </div>
         </Draggable>
+
     );
 }
